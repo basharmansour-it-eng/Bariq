@@ -1,0 +1,56 @@
+import 'package:get/get.dart';
+
+/// استخدمها هكذا: Text('book_now'.tr)
+class AppTranslations extends Translations {
+  @override
+  Map<String, Map<String, String>> get keys => {
+        'ar': {
+          'app_name': 'بريق',
+          'tagline': 'سيارتك تلمع.. ونحن نأتي إليك',
+          'hello': 'مرحباً 👋',
+          'home_subtitle': 'متى تريد أن نغسل سيارتك؟',
+          'book_now': 'احجز غسلة الآن',
+          'schedule': 'جدولة موعد',
+          'our_services': 'خدماتنا',
+          'see_all': 'عرض الكل',
+          'service_exterior': 'غسيل خارجي',
+          'service_interior': 'تنظيف داخلي',
+          'service_full': 'باقة كاملة',
+          'service_waterless': 'غسيل بدون ماء',
+          'service_polish': 'تلميع وحماية',
+          'service_ceramic': 'سيراميك',
+          'from_price': 'من @price د.إ',
+          'language': 'اللغة',
+          'switch_language': 'English',
+          'tab_home': 'الرئيسية',
+          'tab_orders': 'طلباتي',
+          'tab_offers': 'العروض',
+          'tab_profile': 'حسابي',
+          'loading': 'جاري التحميل...',
+        },
+        'en': {
+          'app_name': 'Bariq',
+          'tagline': 'Your car shines.. we come to you',
+          'hello': 'Hello 👋',
+          'home_subtitle': 'When should we wash your car?',
+          'book_now': 'Book a wash now',
+          'schedule': 'Schedule',
+          'our_services': 'Our services',
+          'see_all': 'See all',
+          'service_exterior': 'Exterior wash',
+          'service_interior': 'Interior cleaning',
+          'service_full': 'Full package',
+          'service_waterless': 'Waterless wash',
+          'service_polish': 'Polish & protect',
+          'service_ceramic': 'Ceramic',
+          'from_price': 'From AED @price',
+          'language': 'Language',
+          'switch_language': 'العربية',
+          'tab_home': 'Home',
+          'tab_orders': 'Orders',
+          'tab_offers': 'Offers',
+          'tab_profile': 'Profile',
+          'loading': 'Loading...',
+        },
+      };
+}
