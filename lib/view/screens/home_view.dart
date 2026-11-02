@@ -53,35 +53,14 @@ class HomeView extends GetView<HomeController> {
                 crossAxisSpacing: 14,
                 childAspectRatio: 1.15,
               ),
-              itemBuilder: (_, i) =>
-                  ServiceCard(service: controller.services[i]),
+              itemBuilder: (_, i) {
+                final service = controller.services[i];
+                return ServiceCard(
+                  service: service,
+                  onTap: () => controller.openService(service),
+                );
+              },
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Obx(
-        () => NavigationBar(
-          backgroundColor: whiteColor,
-          indicatorColor: lightCyan.withValues(alpha: 0.35),
-          selectedIndex: controller.currentTab.value,
-          onDestinationSelected: controller.changeTab,
-          destinations: [
-            NavigationDestination(
-                icon: const Icon(Icons.home_outlined),
-                selectedIcon: const Icon(Icons.home_rounded),
-                label: 'tab_home'.tr),
-            NavigationDestination(
-                icon: const Icon(Icons.receipt_long_outlined),
-                selectedIcon: const Icon(Icons.receipt_long_rounded),
-                label: 'tab_orders'.tr),
-            NavigationDestination(
-                icon: const Icon(Icons.local_offer_outlined),
-                selectedIcon: const Icon(Icons.local_offer_rounded),
-                label: 'tab_offers'.tr),
-            NavigationDestination(
-                icon: const Icon(Icons.person_outline_rounded),
-                selectedIcon: const Icon(Icons.person_rounded),
-                label: 'tab_profile'.tr),
           ],
         ),
       ),

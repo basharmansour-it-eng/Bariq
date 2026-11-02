@@ -2,7 +2,6 @@ import 'package:bariq/core/constant/const.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 /// البطاقة الرئيسية في أعلى الشاشة الرئيسية (احجز الآن / جدولة).
 class HeroCard extends StatelessWidget {
   final VoidCallback onBookNow;
@@ -40,7 +39,7 @@ class HeroCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             child: Image.asset(
               mainImage,
-              height: context.screenHeight * 0.16,
+              height: context.screenHeight * 0.28,
               width: double.infinity,
               fit: BoxFit.cover,
               errorBuilder: (_, __, ___) => const SizedBox.shrink(),
