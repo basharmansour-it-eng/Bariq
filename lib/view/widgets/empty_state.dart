@@ -2,17 +2,21 @@ import 'package:bariq/core/constant/const.dart';
 import 'package:flutter/material.dart';
 
 
-/// حالة «لا يوجد محتوى» الموحّدة: أيقونة + عنوان + وصف.
+/// حالة «لا يوجد محتوى» الموحّدة: أيقونة + عنوان + وصف + زر اختياري.
 class EmptyState extends StatelessWidget {
   final IconData icon;
   final String title;
   final String description;
+  final String? actionText;
+  final VoidCallback? onAction;
 
   const EmptyState({
     super.key,
     required this.icon,
     required this.title,
     required this.description,
+    this.actionText,
+    this.onAction,
   });
 
   @override
@@ -34,6 +38,7 @@ class EmptyState extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               title,
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: cairo,
                 fontSize: 18,
@@ -51,6 +56,16 @@ class EmptyState extends StatelessWidget {
                 color: darkNavy.withValues(alpha: 0.6),
               ),
             ),
+            if (actionText != null && onAction != null) ...[
+              const SizedBox(height: 20),
+              SizedBox(
+                width: 200,
+                child: ElevatedButton(
+                  onPressed: onAction,
+                  child: Text(actionText!),
+                ),
+              ),
+            ],
           ],
         ),
       ),

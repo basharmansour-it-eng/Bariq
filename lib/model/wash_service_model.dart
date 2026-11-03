@@ -2,8 +2,27 @@ import 'package:flutter/material.dart';
 
 import 'car_model.dart';
 
-/// أنواع الخدمات. الاسم (name) يُستخدم كمفتاح ترجمة: service_<name>
 enum ServiceCategory { exterior, interior, full, waterless, polish, ceramic }
+
+
+extension ServiceCategoryX on ServiceCategory {
+  IconData get icon {
+    switch (this) {
+      case ServiceCategory.exterior:
+        return Icons.local_car_wash_rounded;
+      case ServiceCategory.interior:
+        return Icons.airline_seat_recline_normal_rounded;
+      case ServiceCategory.full:
+        return Icons.auto_awesome_rounded;
+      case ServiceCategory.waterless:
+        return Icons.water_drop_outlined;
+      case ServiceCategory.polish:
+        return Icons.shield_moon_rounded;
+      case ServiceCategory.ceramic:
+        return Icons.diamond_outlined;
+    }
+  }
+}
 
 class WashService {
   final String id;
@@ -79,22 +98,7 @@ class WashService {
     }
   }
 
-  IconData get icon {
-    switch (category) {
-      case ServiceCategory.exterior:
-        return Icons.local_car_wash_rounded;
-      case ServiceCategory.interior:
-        return Icons.airline_seat_recline_normal_rounded;
-      case ServiceCategory.full:
-        return Icons.auto_awesome_rounded;
-      case ServiceCategory.waterless:
-        return Icons.water_drop_outlined;
-      case ServiceCategory.polish:
-        return Icons.shield_moon_rounded;
-      case ServiceCategory.ceramic:
-        return Icons.diamond_outlined;
-    }
-  }
+IconData get icon => category.icon;
 
   factory WashService.fromJson(Map<String, dynamic> json) => WashService(
         id: json['id'].toString(),

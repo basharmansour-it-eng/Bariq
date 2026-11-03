@@ -13,4 +13,11 @@ abstract class Routes {
   static const addresses = '/addresses';
   static const addAddress = '/add-address';
   static const serviceDetails = '/service-details';
+  static const booking = '/booking';
+  static const checkout = '/checkout';
+  static const orderDetails = '/order-details';
+  static const planDetails = '/plan-details';
+  static const subscriptions = '/subscriptions';
+  static const referrals = '/referrals';
+  static const tracking = '/tracking';
 }

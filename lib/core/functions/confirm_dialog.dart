@@ -10,6 +10,7 @@ Future<bool> confirmDialog({
   required String title,
   required String message,
   required String confirmText,
+  String? cancelText,
   bool destructive = true,
 }) async {
   final result = await Get.dialog<bool>(
@@ -31,7 +32,7 @@ Future<bool> confirmDialog({
       actions: [
         TextButton(
           onPressed: () => Get.back(result: false),
-          child: Text('cancel'.tr),
+          child: Text(cancelText ?? 'cancel'.tr),
         ),
         TextButton(
           onPressed: () => Get.back(result: true),

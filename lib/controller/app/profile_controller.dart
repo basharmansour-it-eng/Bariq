@@ -3,7 +3,6 @@ import 'package:bariq/core/router/app_routes.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-
 class ProfileController extends GetxController {
   final _box = GetStorage();
 
@@ -33,8 +32,11 @@ class ProfileController extends GetxController {
   }
 
   void comingSoon() {
-    Get.snackbar('app_name'.tr, 'coming_soon'.tr,
-        snackPosition: SnackPosition.BOTTOM);
+    Get.snackbar(
+      'app_name'.tr,
+      'coming_soon'.tr,
+      snackPosition: SnackPosition.BOTTOM,
+    );
   }
 
   Future<void> logout() async {
@@ -45,6 +47,11 @@ class ProfileController extends GetxController {
     await _box.remove(StorageKeys.userEmail);
     await _box.remove(StorageKeys.cars);
     await _box.remove(StorageKeys.addresses);
+    await _box.remove(StorageKeys.orders);
+    await _box.remove(StorageKeys.subscriptions);
+    await _box.remove(StorageKeys.referralCode);
+    await _box.remove(StorageKeys.referredBy);
+    await _box.remove(StorageKeys.referralFriends);
     // لاحقاً: FirebaseAuth.instance.signOut()
     Get.offAllNamed(Routes.login);
   }

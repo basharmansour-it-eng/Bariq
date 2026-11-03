@@ -1,8 +1,9 @@
+import 'package:bariq/core/router/app_routes.dart';
 import 'package:bariq/model/addon_model.dart';
+import 'package:bariq/model/booking_args.dart';
 import 'package:bariq/model/car_model.dart';
 import 'package:bariq/model/wash_service_model.dart';
 import 'package:get/get.dart';
-
 
 import 'cars_controller.dart';
 
@@ -37,10 +38,17 @@ class ServiceDetailsController extends GetxController {
     if (!selectedAddOnIds.remove(id)) selectedAddOnIds.add(id);
   }
 
+  List<AddOn> get selectedAddOns =>
+      addOns.where((a) => selectedAddOnIds.contains(a.id)).toList();
+
   void continueBooking() {
-    // التالي: صفحة اختيار السيارة والعنوان والوقت،
-    // وسنمرّر لها: service + carType + selectedAddOnIds
-    Get.snackbar('app_name'.tr, 'coming_soon'.tr,
-        snackPosition: SnackPosition.BOTTOM);
+    Get.toNamed(
+      Routes.booking,
+      arguments: BookingArgs(
+        service: service,
+        addOns: selectedAddOns,
+        carType: carType.value,
+      ),
+    );
   }
 }

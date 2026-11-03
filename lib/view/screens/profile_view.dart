@@ -53,16 +53,16 @@ class ProfileView extends GetView<ProfileController> {
                   title: 'profile_addresses'.tr,
                   onTap: () => Get.toNamed(Routes.addresses),
                 ),
-                MenuTile(
-                  icon: Icons.autorenew_rounded,
-                  title: 'profile_subscriptions'.tr,
-                  onTap: controller.comingSoon,
-                ),
-                MenuTile(
-                  icon: Icons.card_giftcard_rounded,
-                  title: 'profile_invite'.tr,
-                  onTap: controller.comingSoon,
-                ),
+               MenuTile(
+  icon: Icons.autorenew_rounded,
+  title: 'profile_subscriptions'.tr,
+  onTap: () => Get.toNamed(Routes.subscriptions),
+),
+               MenuTile(
+  icon: Icons.card_giftcard_rounded,
+  title: 'profile_invite'.tr,
+  onTap: () => Get.toNamed(Routes.referrals),
+),
               ],
             ),
             const SizedBox(height: 20),

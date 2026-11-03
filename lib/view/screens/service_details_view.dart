@@ -1,5 +1,6 @@
 import 'package:bariq/controller/app/service_details_controller.dart';
 import 'package:bariq/core/constant/const.dart';
+import 'package:bariq/view/widgets/bottom_price_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,7 +8,6 @@ import '../../model/wash_service_model.dart';
 import '../widgets/addon_tile.dart';
 import '../widgets/car_type_selector.dart';
 import '../widgets/form_label.dart';
-import '../widgets/primary_button.dart';
 
 class ServiceDetailsView extends GetView<ServiceDetailsController> {
   const ServiceDetailsView({super.key});
@@ -88,59 +88,14 @@ class ServiceDetailsView extends GetView<ServiceDetailsController> {
             ),
         ],
       ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
-        decoration: BoxDecoration(
-          color: whiteColor,
-          boxShadow: [
-            BoxShadow(
-              color: darkNavy.withValues(alpha: 0.08),
-              blurRadius: 16,
-              offset: const Offset(0, -4),
-            ),
-          ],
-        ),
-        child: SafeArea(
-          top: false,
-          child: Row(
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'total'.tr,
-                    style: TextStyle(
-                      fontFamily: cairo,
-                      fontSize: 12,
-                      color: darkNavy.withValues(alpha: 0.6),
-                    ),
-                  ),
-                  Obx(
-                    () => Text(
-                      'price_aed'.trParams(
-                          {'price': controller.total.toStringAsFixed(0)}),
-                      style: TextStyle(
-                        fontFamily: cairo,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w800,
-                        color: darkNavy,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(width: 20),
-              Expanded(
-                child: PrimaryButton(
-                  text: 'continue_booking'.tr,
-                  onPressed: controller.continueBooking,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+    bottomNavigationBar: Obx(
+  () => BottomPriceBar(
+    priceText:
+        'price_aed'.trParams({'price': controller.total.toStringAsFixed(0)}),
+    buttonText: 'continue_booking'.tr,
+    onPressed: controller.continueBooking,
+  ),
+),
     );
   }
 }

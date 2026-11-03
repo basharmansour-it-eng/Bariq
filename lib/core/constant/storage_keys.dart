@@ -9,4 +9,9 @@ class StorageKeys {
   static const userEmail = 'user_email';
   static const cars = 'cars';
   static const addresses = 'addresses';
+  static const orders = 'orders';
+  static const subscriptions = 'subscriptions';
+  static const referralCode = 'referralCode';
+  static const referredBy = 'referredBy';
+  static const referralFriends = 'referralFriends';
 }
