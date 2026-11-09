@@ -1,5 +1,6 @@
 import 'package:bariq/controller/auth/login_controller.dart';
 import 'package:bariq/core/constant/const.dart';
+import 'package:bariq/core/router/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -112,14 +113,18 @@ class LoginView extends GetView<LoginController> {
               ),
               const SizedBox(height: 16),
               Center(
-                child: Text(
-                  'terms_notice'.tr,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: cairo,
-                    fontSize: 12,
-                    height: 1.6,
-                    color: darkNavy.withValues(alpha: 0.5),
+                child: GestureDetector(
+                  onTap: () => Get.toNamed(Routes.legal),
+                  child: Text(
+                    'terms_notice'.tr,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: cairo,
+                      fontSize: 12,
+                      height: 1.6,
+                      color: darkNavy.withValues(alpha: 0.5),
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
               ),

@@ -3,7 +3,6 @@ import 'package:bariq/model/wash_service_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 /// بطاقة خدمة واحدة في شبكة الخدمات.
 class ServiceCard extends StatelessWidget {
   final WashService service;
@@ -55,8 +54,9 @@ class ServiceCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    'from_price'.trParams(
-                        {'price': service.fromPrice.toStringAsFixed(0)}),
+                    'from_price'.trParams({
+                      'price': service.fromPrice.toStringAsFixed(0),
+                    }),
                     style: TextStyle(
                       fontFamily: cairo,
                       fontSize: 12,

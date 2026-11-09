@@ -2,6 +2,7 @@ import 'package:bariq/core/binding/add_address_binding.dart';
 import 'package:bariq/core/binding/add_car_binding.dart';
 import 'package:bariq/core/binding/booking_binding.dart';
 import 'package:bariq/core/binding/checkout_binding.dart';
+import 'package:bariq/core/binding/help_binding.dart';
 import 'package:bariq/core/binding/main_binding.dart';
 import 'package:bariq/core/binding/order_details_binding.dart';
 import 'package:bariq/core/binding/plan_details_binding.dart';
@@ -14,6 +15,8 @@ import 'package:bariq/view/screens/addresses_view.dart';
 import 'package:bariq/view/screens/booking_view.dart';
 import 'package:bariq/view/screens/cars_view.dart';
 import 'package:bariq/view/screens/checkout_view.dart';
+import 'package:bariq/view/screens/help_view.dart';
+import 'package:bariq/view/screens/legal_view.dart';
 import 'package:bariq/view/screens/login_view.dart';
 import 'package:bariq/view/screens/main_view.dart';
 import 'package:bariq/view/screens/onboarding_view.dart';
@@ -123,6 +126,15 @@ GetPage(
   name: Routes.tracking,
   page: () => const TrackingView(),
   binding: TrackingBinding(),
+),
+GetPage(
+  name: Routes.help,
+  page: () => const HelpView(),
+  binding: HelpBinding(),
+),
+GetPage(
+  name: Routes.legal,
+  page: () => const LegalView(),
 ),
   ];
 }

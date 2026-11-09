@@ -53,16 +53,16 @@ class ProfileView extends GetView<ProfileController> {
                   title: 'profile_addresses'.tr,
                   onTap: () => Get.toNamed(Routes.addresses),
                 ),
-               MenuTile(
-  icon: Icons.autorenew_rounded,
-  title: 'profile_subscriptions'.tr,
-  onTap: () => Get.toNamed(Routes.subscriptions),
-),
-               MenuTile(
-  icon: Icons.card_giftcard_rounded,
-  title: 'profile_invite'.tr,
-  onTap: () => Get.toNamed(Routes.referrals),
-),
+                MenuTile(
+                  icon: Icons.autorenew_rounded,
+                  title: 'profile_subscriptions'.tr,
+                  onTap: () => Get.toNamed(Routes.subscriptions),
+                ),
+                MenuTile(
+                  icon: Icons.card_giftcard_rounded,
+                  title: 'profile_invite'.tr,
+                  onTap: () => Get.toNamed(Routes.referrals),
+                ),
               ],
             ),
             const SizedBox(height: 20),
@@ -78,12 +78,12 @@ class ProfileView extends GetView<ProfileController> {
                 MenuTile(
                   icon: Icons.headset_mic_rounded,
                   title: 'profile_help'.tr,
-                  onTap: controller.comingSoon,
+                  onTap: () => Get.toNamed(Routes.help),
                 ),
                 MenuTile(
                   icon: Icons.shield_rounded,
                   title: 'profile_terms'.tr,
-                  onTap: controller.comingSoon,
+                  onTap: () => Get.toNamed(Routes.legal),
                 ),
               ],
             ),

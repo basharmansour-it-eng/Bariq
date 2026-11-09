@@ -410,6 +410,82 @@ class AppTranslations extends Translations {
       'track_call': 'اتصال',
       'track_chat': 'محادثة',
       'track_action_soon': 'ستتوفر هذه الميزة قريباً',
+
+      // المساعدة
+      'help_title': 'كيف نساعدك؟',
+      'help_hours': 'نرد عليك يومياً من @from إلى @to',
+      'help_whatsapp': 'واتساب',
+      'help_call': 'اتصال',
+      'help_email': 'بريد',
+      'help_faq': 'الأسئلة الشائعة',
+      'help_open_failed': 'تعذّر فتح التطبيق المطلوب',
+      'help_whatsapp_text': 'مرحباً، أحتاج مساعدة بخصوص طلبي في بريق',
+      'help_email_subject': 'طلب مساعدة - بريق',
+
+      'faq_1_q': 'كيف أحجز غسلة؟',
+      'faq_1_a':
+          'اختر الخدمة من الرئيسية، ثم حدّد السيارة والعنوان والموعد، وراجع الطلب وأكّده. سيصل الفني إلى موقعك في الوقت المحدد.',
+      'faq_2_q': 'ما هو الغسيل بدون ماء؟',
+      'faq_2_a':
+          'تقنية تنظّف السيارة بمنتجات خاصة دون استخدام الماء، فتحافظ على الطلاء من حرارة الإمارات وتوفّر المياه.',
+      'faq_3_q': 'كيف ألغي طلباً؟',
+      'faq_3_a':
+          'من «طلباتي» افتح الطلب واضغط «إلغاء الطلب». يمكن الإلغاء قبل انطلاق الفني فقط، وبعدها تواصل مع الدعم.',
+      'faq_4_q': 'ما طرق الدفع المتاحة؟',
+      'faq_4_a':
+          'البطاقة، و Apple Pay أو Google Pay بحسب جهازك، والدفع نقداً عند الغسيل.',
+      'faq_5_q': 'كيف أتتبع الفني؟',
+      'faq_5_a':
+          'عندما يكون الفني في الطريق يظهر زر «تتبع الفني» في تفاصيل الطلب، لترى موقعه والوقت المتوقع لوصوله.',
+      'faq_6_q': 'كيف أدير اشتراكي؟',
+      'faq_6_a':
+          'من «حسابي ← اشتراكاتي» يمكنك تبديل التجديد بين تلقائي ويدوي، أو إلغاء الاشتراك.',
+      'faq_7_q': 'أين أجد صور قبل وبعد الغسيل؟',
+      'faq_7_a':
+          'بعد اكتمال الغسيل تظهر الصور في تفاصيل الطلب، وتستطيع هناك تقييم الخدمة.',
+      'faq_8_q': 'كيف تعمل الإحالات؟',
+      'faq_8_a':
+          'شارك كودك من «ادعُ أصدقاءك»، فيحصل صديقك على خصم على أول غسلة، وتحصل أنت على رصيد بعد إتمامه أول غسلة.',
+
+      // الشروط والخصوصية
+      'legal_terms': 'الشروط',
+      'legal_privacy': 'الخصوصية',
+      'legal_updated': 'آخر تحديث: نوفمبر 2026',
+
+      'terms_1_t': 'استخدام الخدمة',
+      'terms_1_b':
+          'بريق خدمة غسيل سيارات متنقلة داخل الإمارات. باستخدامك التطبيق فإنك توافق على هذه الشروط.',
+      'terms_2_t': 'الحجز والإلغاء',
+      'terms_2_b':
+          'تُحجز الخدمة بتحديد السيارة والعنوان والموعد. يمكن إلغاء الطلب قبل انطلاق الفني، وبعد انطلاقه يلزم التواصل مع الدعم.',
+      'terms_3_t': 'الأسعار والدفع',
+      'terms_3_b':
+          'تُعرض الأسعار بالدرهم الإماراتي وتختلف بحسب نوع السيارة والإضافات. يتم الدفع بالوسيلة التي تختارها عند تأكيد الطلب.',
+      'terms_4_t': 'الاشتراكات',
+      'terms_4_b':
+          'يتجدد الاشتراك الشهري تلقائياً أو يدوياً بحسب اختيارك، ويمكنك إلغاؤه من التطبيق.',
+      'terms_5_t': 'مسؤوليات العميل',
+      'terms_5_b':
+          'يلتزم العميل بإتاحة الوصول إلى السيارة في الموعد المحدد وإبلاغ الفني بأي ملاحظات أو أضرار سابقة. نلتقط صوراً قبل الغسيل وبعده لتوثيق حالة السيارة.',
+      'terms_6_t': 'التواصل',
+      'terms_6_b': 'لأي استفسار تواصل معنا عبر «المساعدة والدعم» في التطبيق.',
+
+      'privacy_1_t': 'البيانات التي نجمعها',
+      'privacy_1_b':
+          'الاسم ورقم الهاتف والبريد الإلكتروني (اختياري)، وبيانات سياراتك وعناوينك، وسجل الطلبات والاشتراكات، وصور قبل وبعد الغسيل.',
+      'privacy_2_t': 'كيف نستخدمها',
+      'privacy_2_b':
+          'لتنفيذ طلباتك، وتتبع الفني، وإرسال الإشعارات، وتحسين خدماتنا.',
+      'privacy_3_t': 'المشاركة',
+      'privacy_3_b':
+          'يطّلع الفني المكلّف على اسمك ورقم هاتفك وعنوانك ونوع سيارتك أثناء تنفيذ الطلب فقط. نشارك بيانات الدفع مع مزوّد الدفع لإتمام العملية، ولا نبيع بياناتك.',
+      'privacy_4_t': 'الموقع',
+      'privacy_4_b': 'نستخدم موقعك لتحديد عنوان الغسيل وتتبع وصول الفني.',
+      'privacy_5_t': 'حقوقك',
+      'privacy_5_b': 'يمكنك تعديل بياناتك أو طلب حذف حسابك بالتواصل معنا.',
+      'privacy_6_t': 'الأمان والاحتفاظ',
+      'privacy_6_b':
+          'نحمي بياناتك بإجراءات تقنية مناسبة، ونحتفظ بها للمدة اللازمة لتقديم الخدمة والالتزام بالأنظمة.',
     },
     'en': {
       // General
@@ -832,6 +908,85 @@ class AppTranslations extends Translations {
       'track_call': 'Call',
       'track_chat': 'Chat',
       'track_action_soon': 'This feature is coming soon',
+
+      // Help
+      'help_title': 'How can we help?',
+      'help_hours': 'We reply daily from @from to @to',
+      'help_whatsapp': 'WhatsApp',
+      'help_call': 'Call',
+      'help_email': 'Email',
+      'help_faq': 'Frequently asked questions',
+      'help_open_failed': 'Could not open the requested app',
+      'help_whatsapp_text': 'Hello, I need help with my Bariq order',
+      'help_email_subject': 'Help request - Bariq',
+
+      'faq_1_q': 'How do I book a wash?',
+      'faq_1_a':
+          'Pick a service on Home, choose your car, address and time, then review and confirm. The technician will arrive at your location on time.',
+      'faq_2_q': 'What is a waterless wash?',
+      'faq_2_a':
+          'A technique that cleans your car with special products and no water, protecting the paint from the UAE heat while saving water.',
+      'faq_3_q': 'How do I cancel an order?',
+      'faq_3_a':
+          'Open the order from Orders and tap "Cancel order". You can cancel only before the technician is on the way; after that, contact support.',
+      'faq_4_q': 'Which payment methods are available?',
+      'faq_4_a':
+          'Card, Apple Pay or Google Pay depending on your device, and cash on delivery of the service.',
+      'faq_5_q': 'How do I track my technician?',
+      'faq_5_a':
+          'When the technician is on the way, a "Track technician" button appears in the order details so you can see their location and estimated arrival.',
+      'faq_6_q': 'How do I manage my subscription?',
+      'faq_6_a':
+          'From Profile > My subscriptions you can switch renewal between automatic and manual, or cancel the subscription.',
+      'faq_7_q': 'Where do I find before & after photos?',
+      'faq_7_a':
+          'Once the wash is complete, the photos appear in the order details, where you can also rate the service.',
+      'faq_8_q': 'How do referrals work?',
+      'faq_8_a':
+          'Share your code from "Invite friends". Your friend gets a discount on their first wash, and you get credit once they complete it.',
+
+      // Terms & privacy
+      'legal_terms': 'Terms',
+      'legal_privacy': 'Privacy',
+      'legal_updated': 'Last updated: November 2026',
+
+      'terms_1_t': 'Using the service',
+      'terms_1_b':
+          'Bariq is a mobile car wash service in the UAE. By using the app you agree to these terms.',
+      'terms_2_t': 'Booking and cancellation',
+      'terms_2_b':
+          'You book by choosing a car, address and time. An order can be cancelled before the technician is on the way; after that, please contact support.',
+      'terms_3_t': 'Pricing and payment',
+      'terms_3_b':
+          'Prices are shown in UAE dirhams and vary by car type and add-ons. You pay with the method you choose when confirming the order.',
+      'terms_4_t': 'Subscriptions',
+      'terms_4_b':
+          'A monthly subscription renews automatically or manually, as you choose, and you can cancel it from the app.',
+      'terms_5_t': 'Customer responsibilities',
+      'terms_5_b':
+          'The customer must provide access to the car at the scheduled time and tell the technician about any notes or existing damage. We take before and after photos to document the car condition.',
+      'terms_6_t': 'Contact',
+      'terms_6_b':
+          'For any question, contact us through "Help & support" in the app.',
+
+      'privacy_1_t': 'Data we collect',
+      'privacy_1_b':
+          'Your name, phone number and email (optional), your cars and addresses, your orders and subscriptions history, and before and after photos.',
+      'privacy_2_t': 'How we use it',
+      'privacy_2_b':
+          'To fulfil your orders, track the technician, send notifications and improve our services.',
+      'privacy_3_t': 'Sharing',
+      'privacy_3_b':
+          'The assigned technician sees your name, phone number, address and car type only while fulfilling the order. We share payment details with the payment provider to complete the transaction, and we never sell your data.',
+      'privacy_4_t': 'Location',
+      'privacy_4_b':
+          'We use your location to set the wash address and track the technician arrival.',
+      'privacy_5_t': 'Your rights',
+      'privacy_5_b':
+          'You can update your data or request deletion of your account by contacting us.',
+      'privacy_6_t': 'Security and retention',
+      'privacy_6_b':
+          'We protect your data with appropriate technical measures and keep it for as long as needed to provide the service and comply with regulations.',
     },
   };
 }

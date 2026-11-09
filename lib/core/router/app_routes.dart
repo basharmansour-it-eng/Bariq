@@ -20,4 +20,6 @@ abstract class Routes {
   static const subscriptions = '/subscriptions';
   static const referrals = '/referrals';
   static const tracking = '/tracking';
+  static const help = '/help';
+  static const legal = '/legal';
 }
