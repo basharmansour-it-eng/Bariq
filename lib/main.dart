@@ -12,7 +12,7 @@ import 'core/theme/app_theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
-  await GetStorage().erase();
+  // await GetStorage().erase();
   Get.put(LocaleController(), permanent: true);
   runApp(const Bariq());
 }

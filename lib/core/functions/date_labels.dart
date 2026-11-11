@@ -47,3 +47,17 @@ DateTime addOneMonth(DateTime d) {
 
 /// 3/11/2026 (معزول الاتجاه)
 String dateLabel(DateTime d) => '\u2066${d.day}/${d.month}/${d.year}\u2069';
+
+/// وقت نسبي مختصر: الآن / منذ 5 د / منذ 3 س / أمس / تاريخ.
+String timeAgoLabel(DateTime d) {
+  final diff = DateTime.now().difference(d);
+  if (diff.inMinutes < 1) return 'time_now'.tr;
+  if (diff.inMinutes < 60) {
+    return 'time_min_ago'.trParams({'n': '\u2066${diff.inMinutes}\u2069'});
+  }
+  if (diff.inHours < 24) {
+    return 'time_hour_ago'.trParams({'n': '\u2066${diff.inHours}\u2069'});
+  }
+  if (diff.inDays < 2) return 'time_yesterday'.tr;
+  return '\u2066${d.day}/${d.month}/${d.year}\u2069';
+}

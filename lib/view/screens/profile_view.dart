@@ -44,6 +44,11 @@ class ProfileView extends GetView<ProfileController> {
             MenuCard(
               children: [
                 MenuTile(
+  icon: Icons.edit_rounded,
+  title: 'edit_profile'.tr,
+  onTap: () => Get.toNamed(Routes.editProfile),
+),
+                MenuTile(
                   icon: Icons.directions_car_rounded,
                   title: 'profile_my_cars'.tr,
                   onTap: () => Get.toNamed(Routes.cars),
@@ -72,8 +77,10 @@ class ProfileView extends GetView<ProfileController> {
                 MenuTile(
                   icon: Icons.language_rounded,
                   title: 'language'.tr,
-                  trailingText: 'switch_language'.tr,
-                  onTap: Get.find<LocaleController>().toggle,
+                  trailingText: Get.find<LocaleController>().isArabic
+                      ? 'العربية'
+                      : 'English',
+                  onTap: _showLanguageSheet,
                 ),
                 MenuTile(
                   icon: Icons.headset_mic_rounded,
@@ -146,6 +153,113 @@ class ProfileView extends GetView<ProfileController> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  void _showLanguageSheet() {
+    final lang = Get.find<LocaleController>();
+
+    void select(String code) {
+      Get.back(); // إغلاق القائمة
+      if (lang.locale.languageCode != code) lang.changeLanguage(code);
+    }
+
+    Get.bottomSheet(
+      SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: darkNavy.withValues(alpha: 0.15),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'language'.tr,
+                style: TextStyle(
+                  fontFamily: cairo,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+                  color: darkNavy,
+                ),
+              ),
+              const SizedBox(height: 16),
+              _LanguageOption(
+                label: 'العربية',
+                selected: lang.locale.languageCode == 'ar',
+                onTap: () => select('ar'),
+              ),
+              const SizedBox(height: 10),
+              _LanguageOption(
+                label: 'English',
+                selected: lang.locale.languageCode == 'en',
+                onTap: () => select('en'),
+              ),
+            ],
+          ),
+        ),
+      ),
+      backgroundColor: whiteColor,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+    );
+  }
+}
+
+class _LanguageOption extends StatelessWidget {
+  final String label;
+  final bool selected;
+  final VoidCallback onTap;
+
+  const _LanguageOption({
+    required this.label,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: selected ? primaryBlue.withValues(alpha: 0.08) : backgroundColor,
+      borderRadius: BorderRadius.circular(16),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: selected ? primaryBlue : Colors.transparent,
+              width: 1.4,
+            ),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    fontFamily: cairo,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: selected ? primaryBlue : darkNavy,
+                  ),
+                ),
+              ),
+              if (selected)
+                const Icon(Icons.check_circle_rounded, color: primaryBlue),
+            ],
+          ),
+        ),
       ),
     );
   }

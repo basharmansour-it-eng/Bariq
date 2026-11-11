@@ -22,4 +22,7 @@ abstract class Routes {
   static const tracking = '/tracking';
   static const help = '/help';
   static const legal = '/legal';
+  static const allServices = '/all-services';
+  static const notifications = '/notifications';
+  static const editProfile = '/edit-profile';
 }

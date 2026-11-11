@@ -1,3 +1,4 @@
+import 'package:bariq/controller/app/notifications_controller.dart';
 import 'package:bariq/core/constant/storage_keys.dart';
 import 'package:bariq/core/router/app_routes.dart';
 import 'package:get/get.dart';
@@ -52,6 +53,9 @@ class ProfileController extends GetxController {
     await _box.remove(StorageKeys.referralCode);
     await _box.remove(StorageKeys.referredBy);
     await _box.remove(StorageKeys.referralFriends);
+    await _box.remove(StorageKeys.notifications);
+    await _box.remove(StorageKeys.notificationsSeeded);
+    Get.delete<NotificationsController>(force: true);
     // لاحقاً: FirebaseAuth.instance.signOut()
     Get.offAllNamed(Routes.login);
   }

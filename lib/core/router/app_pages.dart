@@ -2,6 +2,7 @@ import 'package:bariq/core/binding/add_address_binding.dart';
 import 'package:bariq/core/binding/add_car_binding.dart';
 import 'package:bariq/core/binding/booking_binding.dart';
 import 'package:bariq/core/binding/checkout_binding.dart';
+import 'package:bariq/core/binding/edit_profile_binding.dart';
 import 'package:bariq/core/binding/help_binding.dart';
 import 'package:bariq/core/binding/main_binding.dart';
 import 'package:bariq/core/binding/order_details_binding.dart';
@@ -12,13 +13,16 @@ import 'package:bariq/core/binding/tracking_binding.dart';
 import 'package:bariq/view/screens/add_address_view.dart';
 import 'package:bariq/view/screens/add_car_view.dart';
 import 'package:bariq/view/screens/addresses_view.dart';
+import 'package:bariq/view/screens/all_services_view.dart';
 import 'package:bariq/view/screens/booking_view.dart';
 import 'package:bariq/view/screens/cars_view.dart';
 import 'package:bariq/view/screens/checkout_view.dart';
+import 'package:bariq/view/screens/edit_profile_view.dart';
 import 'package:bariq/view/screens/help_view.dart';
 import 'package:bariq/view/screens/legal_view.dart';
 import 'package:bariq/view/screens/login_view.dart';
 import 'package:bariq/view/screens/main_view.dart';
+import 'package:bariq/view/screens/notifications_view.dart';
 import 'package:bariq/view/screens/onboarding_view.dart';
 import 'package:bariq/view/screens/order_details_view.dart';
 import 'package:bariq/view/screens/otp_view.dart';
@@ -135,6 +139,19 @@ GetPage(
 GetPage(
   name: Routes.legal,
   page: () => const LegalView(),
+),
+GetPage(
+  name: Routes.allServices,
+  page: () => const AllServicesView(),
+),
+GetPage(
+  name: Routes.notifications,
+  page: () => const NotificationsView(),
+),
+GetPage(
+  name: Routes.editProfile,
+  page: () => const EditProfileView(),
+  binding: EditProfileBinding(),
 ),
   ];
 }

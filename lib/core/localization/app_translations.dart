@@ -486,6 +486,57 @@ class AppTranslations extends Translations {
       'privacy_6_t': 'الأمان والاحتفاظ',
       'privacy_6_b':
           'نحمي بياناتك بإجراءات تقنية مناسبة، ونحتفظ بها للمدة اللازمة لتقديم الخدمة والالتزام بالأنظمة.',
+
+      // كل الخدمات
+      'all_services_subtitle': 'اختر الخدمة المناسبة لسيارتك',
+      'service_min': '@min دقيقة',
+      'service_includes_count': '@count مزايا',
+
+      // الإشعارات
+      'notif_title': 'الإشعارات',
+      'notif_mark_all': 'قراءة الكل',
+      'notif_empty_title': 'لا توجد إشعارات',
+      'notif_empty_desc': 'ستصلك هنا تحديثات طلباتك واشتراكاتك وعروضنا',
+      'time_now': 'الآن',
+      'time_min_ago': 'منذ @n د',
+      'time_hour_ago': 'منذ @n س',
+      'time_yesterday': 'أمس',
+
+      'notif_order_pending_t': 'تم استلام طلبك',
+      'notif_order_pending_b': 'طلبك @id بانتظار التأكيد',
+      'notif_order_confirmed_t': 'تم تأكيد طلبك',
+      'notif_order_confirmed_b': 'تم تأكيد الطلب @id وجاري تجهيز الفني',
+      'notif_order_onTheWay_t': 'الفني في الطريق إليك',
+      'notif_order_onTheWay_b':
+          'تابع موقع الفني ووقت وصوله من تفاصيل الطلب @id',
+      'notif_order_inProgress_t': 'بدأ غسل سيارتك',
+      'notif_order_inProgress_b': 'الفني يعمل على الطلب @id الآن',
+      'notif_order_completed_t': 'اكتمل طلبك ✨',
+      'notif_order_completed_b': 'شاهد صور قبل وبعد وقيّم الخدمة للطلب @id',
+      'notif_order_cancelled_t': 'تم إلغاء الطلب',
+      'notif_order_cancelled_b': 'تم إلغاء الطلب @id',
+      'notif_sub_t': 'تم تفعيل اشتراكك',
+      'notif_sub_b': 'اشتراكك الشهري فعّال الآن، استمتع بغسلاتك!',
+      'notif_welcome_t': 'هدية ترحيب 🎁',
+      'notif_welcome_b': 'استخدم الكود WELCOME20 واحصل على خصم 20 د.إ على طلبك',
+      'notif_invite_t': 'ادعُ أصدقاءك واكسب رصيداً',
+      'notif_invite_b':
+          'شارك كودك الخاص: يحصل صديقك على خصم وتحصل أنت على رصيد',
+
+      // تعديل الملف الشخصي
+      'edit_profile': 'تعديل الملف الشخصي',
+      'save_changes': 'حفظ التعديلات',
+      'name_invalid': 'أدخل اسماً من حرفين على الأقل',
+      'phone_cannot_change': 'لا يمكن تغيير رقم الهاتف لأنه مرتبط بحسابك',
+      'profile_updated': 'تم حفظ التعديلات',
+      'delete_account': 'حذف حسابي',
+      'delete_account_desc':
+          'سيتم حذف حسابك وجميع بياناتك نهائياً، ولا يمكن التراجع عن ذلك.',
+      'delete_account_confirm':
+          'هل أنت متأكد من حذف حسابك؟ ستفقد سياراتك وعناوينك وطلباتك واشتراكاتك ورصيد الإحالات، ولا يمكن استرجاعها.',
+      'delete_account_blocked':
+          'لا يمكن حذف الحساب لوجود طلب جارٍ أو اشتراك فعّال. أكمل الطلب أو ألغِ الاشتراك أولاً.',
+      'account_deleted': 'تم حذف حسابك',
     },
     'en': {
       // General
@@ -987,6 +1038,61 @@ class AppTranslations extends Translations {
       'privacy_6_t': 'Security and retention',
       'privacy_6_b':
           'We protect your data with appropriate technical measures and keep it for as long as needed to provide the service and comply with regulations.',
+
+      // All services
+      'all_services_subtitle': 'Choose the right service for your car',
+      'service_min': '@min min',
+      'service_includes_count': '@count inclusions',
+
+      // Notifications
+      'notif_title': 'Notifications',
+      'notif_mark_all': 'Mark all read',
+      'notif_empty_title': 'No notifications',
+      'notif_empty_desc':
+          'Updates about your orders, subscriptions and offers will appear here',
+      'time_now': 'Now',
+      'time_min_ago': '@n min ago',
+      'time_hour_ago': '@n h ago',
+      'time_yesterday': 'Yesterday',
+
+      'notif_order_pending_t': 'Order received',
+      'notif_order_pending_b': 'Your order @id is awaiting confirmation',
+      'notif_order_confirmed_t': 'Order confirmed',
+      'notif_order_confirmed_b':
+          'Order @id is confirmed and a technician is being assigned',
+      'notif_order_onTheWay_t': 'Your technician is on the way',
+      'notif_order_onTheWay_b':
+          'Track their location and arrival time in order @id',
+      'notif_order_inProgress_t': 'Washing started',
+      'notif_order_inProgress_b': 'Your technician is working on order @id now',
+      'notif_order_completed_t': 'Order completed ✨',
+      'notif_order_completed_b':
+          'See the before & after photos and rate order @id',
+      'notif_order_cancelled_t': 'Order cancelled',
+      'notif_order_cancelled_b': 'Order @id was cancelled',
+      'notif_sub_t': 'Subscription activated',
+      'notif_sub_b': 'Your monthly subscription is active, enjoy your washes!',
+      'notif_welcome_t': 'Welcome gift 🎁',
+      'notif_welcome_b': 'Use code WELCOME20 to get AED 20 off your order',
+      'notif_invite_t': 'Invite friends and earn credit',
+      'notif_invite_b':
+          'Share your code: your friend gets a discount and you get credit',
+
+      // Edit profile
+      'edit_profile': 'Edit profile',
+      'save_changes': 'Save changes',
+      'name_invalid': 'Enter a name with at least 2 characters',
+      'phone_cannot_change':
+          'Phone number cannot be changed as it is linked to your account',
+      'profile_updated': 'Changes saved',
+      'delete_account': 'Delete my account',
+      'delete_account_desc':
+          'Your account and all your data will be permanently deleted. This action cannot be undone.',
+      'delete_account_confirm':
+          'Are you sure you want to delete your account? Your cars, addresses, orders, subscriptions and referral rewards will be permanently deleted and cannot be recovered.',
+      'delete_account_blocked':
+          'Your account cannot be deleted while you have an active order or subscription. Please wait for the order to finish or cancel the subscription first.',
+      'account_deleted': 'Your account has been deleted',
     },
   };
 }

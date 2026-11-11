@@ -13,6 +13,7 @@ const Color deepBlue = Color(0xFF001875);
 const Color whiteColor = Color(0xFFFFFFFF);
 
 const Color backgroundColor = Color(0xFFF4F8FD);
+const Color accentYellow = Color(0xFFFFB703);
 
 // ─── الخطوط ───────────────────────────────────────────
 String cairo = 'Cairo';
@@ -20,6 +21,9 @@ String lateef = 'Lateef';
 // ─── الصور ────────────────────────────────────────────
 String logo = 'assets/images/logo.png';
 String mainImage = 'assets/images/bariqMainImage.png';
+String icon = 'assets/images/icon.png';
+
+
 
 // ─── Extension للقيم الديناميكية ──────────────────────
 extension AppSize on BuildContext {

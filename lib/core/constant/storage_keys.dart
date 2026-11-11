@@ -14,4 +14,22 @@ class StorageKeys {
   static const referralCode = 'referralCode';
   static const referredBy = 'referredBy';
   static const referralFriends = 'referralFriends';
+  static const notifications = 'notifications';
+  static const notificationsSeeded = 'notificationsSeeded';
+
+  /// كل مفاتيح بيانات المستخدم (تُمسح عند حذف الحساب).
+/// لا تشمل onboardingSeen لأنه خاص بالجهاز لا بالحساب.
+static const userDataKeys = <String>[
+  loggedIn,
+  userName,
+  userPhone,
+  userEmail,
+  cars,
+  addresses,
+  orders,
+  subscriptions,
+  referralCode,
+  referredBy,
+  referralFriends,
+];
 }
